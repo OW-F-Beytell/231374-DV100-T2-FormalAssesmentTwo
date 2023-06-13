@@ -20,16 +20,16 @@
 
   <body>
 
-    <div class="row">
-      <form class="col-6 form">
+    <div class="row" onload="clearForm()">
+      <form class="col-6 form" id="inputForm">
         <h3>The Smoothie Shack</h3>
-        <input type="text" class="form-control" placeholder="Name your Smoothie" id="smoothie" >
+        <input type="text" class="form-control" placeholder="Name your Smoothie" id="smoothie" value="">
         
         <div class="size">
           <strong><p>Smoothie Size</p></strong>
 
           <div class="base-check">
-            <input class="form-check-input" type="radio" name="baseRadio" id="small" value="Small" data-cost="20">
+            <input class="form-check-input" type="radio" name="baseRadio" id="small" value="Small" data-cost="20" checked="true">
             <label class="form-check-label" for="small">
               Small Cup
             </label>
@@ -108,24 +108,12 @@
 
         
         
-        <button class="btn btn-primary" type="button" onclick="">Make My Smoothie</button>
+        <button class="btn btn-primary" type="button" onclick="makeMySmoothie()">Make My Smoothie</button>
       </form>
       
       <div class="col-6 output">
         <h3>Smoothie Order List</h3>
         <div class="row" id="studentOut">
-
-          <!-- This is the example element -->
-          <div class="col-6">
-            <div class="card" style="width: 100%;">
-              <div class="card-body">
-                <h5 class="card-title">Smoothie Name</h5>
-                <p>Size: value</p>
-                <p>Ingredients: value</p>
-                <p>Total Cost: value</p>
-              </div>
-            </div>
-          </div>
     
         </div> 
       </div>
